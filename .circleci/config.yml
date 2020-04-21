@@ -8,8 +8,10 @@ jobs:
     steps:
       - checkout
       - run: echo "hello world"
+      - python/install-deps 
 workflows: 
   version: 2.1
   build:
     jobs: 
       - build
+
