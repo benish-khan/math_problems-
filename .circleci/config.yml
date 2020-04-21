@@ -1,0 +1,18 @@
+version 2.1
+orbs:
+  python: circleci/python@0.2.1
+  
+jobs:
+  build:
+    executor: python/default
+    steps:
+      - checkout
+      - run:
+         echo "Hello World"
+
+workflows:
+  version 2.1
+  build:
+    jobs:
+      - build
+
